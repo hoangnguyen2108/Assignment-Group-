@@ -1,0 +1,186 @@
+body {
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  font: 14px "Ubuntu", sans-serif;
+  color: #ffffff;
+  background-color:  grey;
+}
+
+/* Nav */
+nav.navbar-fixed-top{
+  padding-top: 25px;
+  padding-bottom: 15px;
+  min-width: 280px;
+}
+
+/* Nav container that contains toggle and brand */
+nav .container .navbar-header {
+  padding-left: 50px;
+  padding-right: 30px;
+}
+
+.navbar .nav > li > a {
+  background:transparent;  
+  padding-top: 15px;
+  padding-left: 30px;  
+  padding-right: 30px;
+  font: 16px "Ubuntu", sans-serif;
+}
+
+#user-text {
+  font-size: 16px;
+}
+
+#userJumbotron{
+  background: #f2f2f2;
+  border: 2px solid black;
+  color: black;
+}
+
+/* SURVEYS */
+#surveyJumbotron{
+  border: 5px solid #ffffff;
+  width: 100%;
+  margin-top: -5%;
+}
+
+#btnAnswerSurvey{
+  width: 75px;
+}
+
+ul.list-group.collapse{
+  color: black;
+}
+
+
+#listTitle{
+  font-size: 18pt;
+  vertical-align: middle;
+  margin-left: 5%;
+}
+
+/* T/F View */
+#questionTitle{
+  color:  grey;
+}
+
+#tfchoice{
+  color: #000000;
+  font-size: 16pt;
+}
+
+/* Create MCQ */
+#mcqJumbotron{
+  color: #000000;
+}
+
+/* ETC */
+#surveyBadge {
+  background-color: grey;
+}
+
+#listBadge{
+  margin-top: 10px;
+}
+
+.breadcrumb{
+  background-color: transparent;
+}
+
+.breadcrumb a{
+  color: white;
+}
+
+.emailfont a{
+  color: white;
+}
+
+.logo{
+  margin-top: -4%;
+}
+
+img {
+  border-radius:4%;
+  display: block;
+  margin-top: -9%;
+  width: 80%;
+  height: 72%;
+  margin: auto;
+}
+
+img.steps {
+  margin-top: -9%;
+  display: inline-block;
+  width: 20%;
+  padding-right: 40px;
+}
+
+div.team{
+    display: inline-block;
+    width: 95%;
+    border-radius:15%;
+    overflow:hidden;
+}
+
+.teamMemberName h4{
+  text-align: center;
+}
+
+.teamMemberInfo p{
+  text-align: center;
+}
+
+.teamMemberInfo article{
+  text-align: center;
+}
+
+
+/* RESULT */
+#displayTF {
+  color: black;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 12pt;
+}
+
+#displayTF th{
+  border: 1px solid black;
+  font-size: 14pt;
+  text-align: center;
+}
+
+/*github font */
+#githubFont {
+  color:white;
+}
+
+/*social media icons */
+#socialMediaIcons {
+  color:white;
+}
+
+
+/* MC CHOICE */
+#mcchoice{
+  color: black;
+}
+
+/* RESULTS MC */
+#displayMC {
+  color: black;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 12pt;
+}
+
+#displayMC th{
+  border: 1px solid black;
+  font-size: 14pt;
+  text-align: center;
+}

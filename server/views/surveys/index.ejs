@@ -1,0 +1,56 @@
+<% include ../partials/header.ejs %>
+    <div style="background:transparent !important" class="jumbotron col-md-offset-2 col-md-8">
+      <h3>&nbsp;&nbsp;&nbsp; <i class="fa fa-archive"></i> Public Surveys</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron" id="surveyJumbotron">          
+            <h4><span style="color:#000000;">Question types<br>
+            </span></h4>            
+            <button class="btn-default" data-toggle="collapse" data-target="#multipleList">Multiple Choice &nbsp;
+            <span class="badge" id="surveyBadge">
+            <!-- Gets length of MCQuestions array that holds Multiple choice object -->
+            <%= mcquestions.length %>
+            </span></button>
+            <button class="btn-default" data-toggle="collapse" data-target="#tfList">True and False
+            <span class="badge" id="surveyBadge">
+            <!-- Gets length of tfquestions array that holds TF choice object -->
+            <%= tfquestions.length %>
+            </span></button><br><br>
+            <!-- LIST FOR Multiple Choice -->
+            <ul id="multipleList" class="list-group collapse">
+              <% if (mcquestions.length == 0) { %>
+              There are no multiple choice surveys available
+              <%} else {%>
+              <% for (let i = 0; i < mcquestions.length; i++){ %>
+              <li class="list-group-item justify-content-between">
+              <a href="/survey/deleteMC/<%= mcquestions[i]._id %>" class="btn btn-danger" role="button"> Delete </a>
+                <a href="survey/mcsurvey/<%= mcquestions[i]._id %>" class="btn btn-success" role="button" id="btnAnswerSurvey">Answer</a><span id="listTitle"><%=mcquestions[i].title%></span><span class="badge" id="listBadge">Total questions: <%=mcquestions[i].questions.length %>&nbsp Exp: <%=(mcquestions[i].expireAt).toDateString()%></span>
+                </li>
+              <%}%>
+              <%}%>
+            </ul>
+            <!-- LIST FOR T/F -->
+            <ul id="tfList" class="list-group collapse">
+            <% if (tfquestions.length == 0) { %>
+            There are no true and false surveys available
+            <%} else {%>
+              <% for (let i = 0; i < tfquestions.length; i++){ %>
+              <li class="list-group-item justify-content-between">
+              <a href="/survey/delete/<%= tfquestions[i]._id %>" class="btn btn-danger" role="button"> Delete </a>
+                <a href="survey/tfsurvey/<%= tfquestions[i]._id %>" class="btn btn-success" role="button" id="btnAnswerSurvey">Answer</a><span id="listTitle"><%=tfquestions[i].title%></span><span class="badge" id="listBadge">
+                Total questions: <%=tfquestions[i].questions.length %>&nbsp Exp: <%=(tfquestions[i].expireAt).toLocaleDateString()%> @ <%=(tfquestions[i].expireAt).toLocaleTimeString()%></span>
+                
+
+                </li>
+              <%}%>
+            <%}%>
+            </ul>
+          </div>
+          <a href="survey/createNew" class="btn btn-success" role="button" id="btnPostSurvey">
+          <i class="fa fa-pencil-square-o"></i>Create a new public survey</a>
+        </div> <!-- body .container.row.col-md-offset-3 col-md-6 -->
+      </div>
+    </div> <!-- body .container -->
+<% include ../partials/footer.ejs %>
